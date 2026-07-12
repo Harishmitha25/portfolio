@@ -2,6 +2,7 @@ import { SiteShell } from "@/components/layout/site-shell";
 import { skillGroups, techColorMap } from "@/lib/skills";
 import { experience } from "@/lib/experience";
 import { projects } from "@/lib/projects";
+import { ContactForm } from "@/components/contact-form";
 
 const skillColorClasses: Record<string, string> = {
   accent: "border-accent text-accent",
@@ -188,10 +189,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="min-h-[50vh] scroll-mt-24 py-12">
+      <section id="contact" className="scroll-mt-24 py-12">
         <h2 className="text-sm font-medium tracking-widest text-foreground-secondary uppercase">
           Contact
         </h2>
+        <h3 className="mt-4 text-2xl font-medium text-foreground lg:text-3xl">
+          Let&apos;s work together
+        </h3>
+        <p className="mt-4 max-w-xl leading-relaxed text-foreground-secondary">
+          I&apos;m open to new opportunities and always happy to talk about
+          front-end engineering, interesting problems, or potential roles.
+          Send a message and I&apos;ll get back to you.
+        </p>
+        <ContactForm />
       </section>
     </SiteShell>
   );

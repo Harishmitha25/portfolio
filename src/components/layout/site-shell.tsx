@@ -6,6 +6,8 @@ import { SocialLinks } from "@/components/layout/social-links";
 import { navItems } from "@/lib/nav-items";
 import { useActiveSection } from "@/hooks/use-active-section";
 
+const sectionIds = navItems.map((item) => item.href.replace("#", ""));
+
 function MenuIcon({ open }: { open: boolean }) {
   return (
     <svg
@@ -49,7 +51,7 @@ function HamburgerIcon() {
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
-  const activeId = useActiveSection(navItems.map((item) => item.href.replace("#", "")));
+  const activeId = useActiveSection(sectionIds);
 
   function handleNavClick() {
     setMenuOpen(false);
@@ -62,7 +64,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         onClick={() => setSidebarOpen((open) => !open)}
         aria-label={sidebarOpen ? "Collapse sidebar" : "Expand sidebar"}
         aria-expanded={sidebarOpen}
-        className="fixed top-6 left-6 z-50 hidden h-9 w-9 items-center justify-center rounded-full border border-border text-foreground-secondary transition-colors hover:border-accent hover:text-accent lg:flex"
+        className="fixed top-6 left-6 z-50 hidden h-11 w-11 items-center justify-center rounded-full border border-border text-foreground-secondary transition-colors hover:border-accent hover:text-accent lg:flex"
       >
         <HamburgerIcon />
       </button>
@@ -82,7 +84,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             onClick={() => setMenuOpen((open) => !open)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground-secondary"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-foreground-secondary"
           >
             <MenuIcon open={menuOpen} />
           </button>
