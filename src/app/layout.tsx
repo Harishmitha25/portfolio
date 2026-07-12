@@ -17,7 +17,7 @@ const themeInitScript = `
 (function () {
   try {
     var stored = localStorage.getItem("theme");
-    if (stored === "dark") {
+    if (stored !== "light") {
       document.documentElement.classList.add("dark");
     }
   } catch (e) {}
