@@ -11,6 +11,13 @@
   --surface: #ffffff;
   --accent: #4f46e5;
   --accent-hover: #4338ca;
+  --teal: #0d9488;
+  --amber: #d97706;
+  --rose: #e11d48;
+  --blue: #2563eb;
+  --purple: #9333ea;
+  --green: #16a34a;
+  --slate: #475569;
 }
 
 .dark {
@@ -22,6 +29,13 @@
   --surface: #18181b;
   --accent: #818cf8;
   --accent-hover: #a5b4fc;
+  --teal: #2dd4bf;
+  --amber: #fbbf24;
+  --rose: #fb7185;
+  --blue: #60a5fa;
+  --purple: #c084fc;
+  --green: #4ade80;
+  --slate: #94a3b8;
 }
 
 @theme inline {
@@ -33,6 +47,13 @@
   --color-surface: var(--surface);
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
+  --color-teal: var(--teal);
+  --color-amber: var(--amber);
+  --color-rose: var(--rose);
+  --color-blue: var(--blue);
+  --color-purple: var(--purple);
+  --color-green: var(--green);
+  --color-slate: var(--slate);
   --font-sans: var(--font-inter);
 }
 
