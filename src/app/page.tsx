@@ -176,14 +176,26 @@ export default function Home() {
                 {project.description}
               </p>
               <TechPills items={project.techStack} />
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-block text-sm font-medium text-accent hover:underline"
-              >
-                View repository ↗
-              </a>
+              <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-accent hover:underline"
+                >
+                  View repository ↗
+                </a>
+                {"demoLink" in project && project.demoLink && (
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-accent hover:underline"
+                  >
+                    Live demo ↗
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>

@@ -17,6 +17,7 @@ export const projects = [
       "Socket.io",
     ],
     link: "https://github.com/Harishmitha25/bugtrackr-software-bug-tracking-and-reporting-tool",
+    demoLink: "https://bugtrackr-harishmitha-raja.vercel.app/",
   },
   {
     title: "Shangri-La Petition Platform",
